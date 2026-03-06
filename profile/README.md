@@ -35,14 +35,12 @@ flowchart LR
     subgraph core["Core"]
         direction TB
         api["dexter-api"]
-        loop["dexter-loop"]
     end
 
     subgraph services["Services"]
         direction TB
         mcp["dexter-mcp"]
         facilitator["dexter-facilitator"]
-        ads["x402-ads"]
     end
 
     subgraph devtools["Dev Tools"]
@@ -50,7 +48,6 @@ flowchart LR
         sdk["dexter-x402-sdk"]
         lab["dexter-lab"]
         wallet["dexter-wallet-app"]
-        sandbox["vendorsandbox"]
     end
 
     subgraph settle["Settlement"]
@@ -69,8 +66,6 @@ flowchart LR
 
     api --> mcp
     api --> facilitator
-    api --> ads
-    loop --> api
 
     sdk -.-> facilitator
     lab --> api
@@ -107,21 +102,12 @@ flowchart LR
 | [**dexter-x402-sdk**](https://github.com/Dexter-DAO/dexter-x402-sdk) | Chain-agnostic x402 v2 SDK — client, server, React hooks, Express middleware | `public` |
 | [**dexter-lab**](https://github.com/Dexter-DAO/dexter-lab) | Build, deploy, and monetize paid APIs from your browser | `public` |
 | [**dexter-wallet-app**](https://github.com/Dexter-DAO/dexter-wallet-app) | Mobile wallet with native x402 payment support (Solana + EVM) | `private` |
-| [**vendorsandbox**](https://github.com/Dexter-DAO/vendorsandbox) | Sandbox for testing x402 seller implementations | `private` |
 
 ### Integrations
 
 | Repo | Description | |
 |------|------------|---|
 | [**clawdexter**](https://github.com/Dexter-DAO/clawdexter) | x402 payments + marketplace for OpenClaw agents — 59+ Solana DeFi tools | `public` |
-| [**dexter-lobster-skill**](https://github.com/Dexter-DAO/dexter-lobster-skill) | x402 marketplace skill for lobster.cash agents | `private` |
-| [**x402-ads**](https://github.com/Dexter-DAO/x402-ads) | Protocol-native sponsored resource recommendations | `private` |
-
-### Operations
-
-| Repo | Description | |
-|------|------------|---|
-| [**dexter-loop**](https://github.com/Dexter-DAO/dexter-loop) | Autonomous x402 payment traffic engine — wallet fleets, volume targeting, adaptive pacing | `private` |
 
 ---
 
@@ -133,7 +119,7 @@ flowchart LR
 
 **Payments** settle on-chain through **dexter-facilitator** — USDC on Solana or Base. The **dexter-x402-sdk** makes integration seamless for any developer.
 
-**Sellers** deploy x402-gated endpoints and get auto-discovered in the [OpenDexter marketplace](https://dexter.cash/opendexter) (5,000+ indexed APIs). Quality verification, AI naming, and reputation scoring happen automatically.
+**Sellers** deploy x402-gated endpoints and get auto-discovered in the [OpenDexter marketplace](https://dexter.cash/opendexter) (5,000+ indexed APIs).
 
 ---
 
