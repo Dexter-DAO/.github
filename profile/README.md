@@ -107,7 +107,7 @@ flowchart LR
 
 | Repo | Description | |
 |------|------------|---|
-| [**clawdexter**](https://github.com/Dexter-DAO/clawdexter) | x402 payments + marketplace for OpenClaw agents — search 5,000+ paid APIs, auto-pay with USDC | `public` |
+| [**clawdexter**](https://github.com/Dexter-DAO/clawdexter) | x402 payments + marketplace for OpenClaw agents — search, price-check, and auto-pay with USDC | `public` |
 
 ---
 
@@ -119,7 +119,7 @@ flowchart LR
 
 **Payments** settle on-chain through **dexter-facilitator** — USDC on Solana or Base. The **dexter-x402-sdk** makes integration seamless for any developer.
 
-**Sellers** deploy x402-gated endpoints and get auto-discovered in the [OpenDexter marketplace](https://dexter.cash/opendexter) (5,000+ indexed APIs).
+**Sellers** deploy x402-gated endpoints and get auto-discovered in the [OpenDexter marketplace](https://dexter.cash/opendexter).
 
 ---
 
