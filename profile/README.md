@@ -107,7 +107,7 @@ flowchart LR
 
 | Repo | Description | |
 |------|------------|---|
-| [**clawdexter**](https://github.com/Dexter-DAO/clawdexter) | x402 payments + marketplace for OpenClaw agents — 59+ Solana DeFi tools | `public` |
+| [**clawdexter**](https://github.com/Dexter-DAO/clawdexter) | x402 payments + marketplace for OpenClaw agents — search 5,000+ paid APIs, auto-pay with USDC | `public` |
 
 ---
 
