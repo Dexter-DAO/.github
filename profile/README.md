@@ -132,9 +132,9 @@ Ways to reach Dexter from other platforms.
 
 **Dexter MCP** (authenticated) gives logged-in agents managed wallets and automatic payment. **OpenDexter MCP** is the public, no-auth entry point — any agent pays directly via the [x402 protocol](https://x402.org), no Dexter account needed.
 
-**Payments** settle on-chain through **dexter-facilitator** — USDC on Solana, Base, Polygon, Arbitrum, Optimism, and Avalanche. The **dexter-x402-sdk** makes integration seamless for any developer.
+**Payments** settle on-chain through **dexter-facilitator** — USDC on Solana, Base, Polygon, Arbitrum, Optimism, Avalanche, and SKALE. The **dexter-x402-sdk** makes integration seamless for any developer.
 
-**Sellers** deploy x402-gated endpoints and get auto-discovered in the [OpenDexter marketplace](https://dexter.cash/opendexter). A crawler indexes resources from every major x402 facilitator (Dexter, Coinbase, PayAI, Ultraviolet) every two hours, then AI-powered verification scores and categorizes each endpoint automatically.
+**Sellers** deploy x402-gated endpoints and get auto-discovered in the [OpenDexter marketplace](https://dexter.cash/opendexter). A crawler indexes resources from external x402 facilitators (Coinbase, PayAI, Ultraviolet) every two hours, then AI-powered verification scores and categorizes each endpoint automatically.
 
 ---
 
