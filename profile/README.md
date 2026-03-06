@@ -17,7 +17,7 @@
 
 ---
 
-## Ecosystem
+## Architecture
 
 ```mermaid
 flowchart LR
@@ -29,12 +29,12 @@ flowchart LR
         alexa["dexter-alexa"]
         cursor["dexter-cursor"]
         claw["clawdexter"]
-        lobster["dexter-lobster-skill"]
     end
 
     subgraph core["Core"]
         direction TB
         api["dexter-api"]
+        ads["x402-ads"]
     end
 
     subgraph services["Services"]
@@ -62,10 +62,10 @@ flowchart LR
     alexa --> api
     cursor --> api
     claw --> api
-    lobster --> api
 
     api --> mcp
     api --> facilitator
+    api --> ads
 
     sdk -.-> facilitator
     lab --> api
@@ -75,39 +75,54 @@ flowchart LR
     facilitator --> base
 ```
 
+> 🟢 Production&nbsp;&nbsp;&nbsp;&nbsp;🟡 In progress&nbsp;&nbsp;&nbsp;&nbsp;🔴 Not yet working
+
 ---
 
-### Core Platform
+### Core Infrastructure
 
-| Repo | Description | |
-|------|------------|---|
-| [**dexter-api**](https://github.com/Dexter-DAO/dexter-api) | Central orchestrator — x402 billing, realtime sessions, MCP proxy, wallet management, marketplace engine | `private` |
-| [**dexter-fe**](https://github.com/Dexter-DAO/dexter-fe) | Next.js frontend — marketplace, Lab, facilitator dashboard, voice/chat UI | `private` |
-| [**dexter-facilitator**](https://github.com/Dexter-DAO/dexter-facilitator) | x402 v2 payment facilitator — verifies, settles, and sponsors transactions on Solana and EVM | `private` |
-| [**dexter-mcp**](https://github.com/Dexter-DAO/dexter-mcp) | MCP server exposing 60+ Solana DeFi tools over HTTP and stdio | `public` |
+The backbone — API, frontend, payment settlement, tool server, and monetization engine.
 
-### Agent Surfaces
+| | Repo | Description |
+|---|------|------------|
+| 🟢 | [**dexter-api**](https://github.com/Dexter-DAO/dexter-api) | Central orchestrator — x402 billing, realtime sessions, MCP proxy, wallet management, marketplace engine |
+| 🟢 | [**dexter-fe**](https://github.com/Dexter-DAO/dexter-fe) | Next.js frontend — marketplace, Lab, facilitator dashboard, voice/chat UI |
+| 🟢 | [**dexter-facilitator**](https://github.com/Dexter-DAO/dexter-facilitator) | x402 v2 payment facilitator — verifies, settles, and sponsors transactions on Solana and EVM |
+| 🟢 | [**dexter-mcp**](https://github.com/Dexter-DAO/dexter-mcp) | MCP server — both OpenDexter (unauthenticated) and Dexter MCP (authenticated) over HTTP and stdio. Also ships the [`@dexterai/opendexter`](https://www.npmjs.com/package/@dexterai/opendexter) npm package. |
+| 🟢 | [**x402-ads**](https://github.com/Dexter-DAO/x402-ads) | Protocol-native sponsored resource recommendations — Dexter's monetization layer for the marketplace |
 
-| Repo | Description | |
-|------|------------|---|
-| [**dexter-agents**](https://github.com/Dexter-DAO/dexter-agents) | Flagship voice agent — OpenAI Realtime API + MCP tools + x402 micropayments | `public` |
-| [**dexter-phone**](https://github.com/Dexter-DAO/dexter-phone) | Phone agent — Twilio Media Streams + OpenAI Realtime + MCP | `private` |
-| [**dexter-alexa**](https://github.com/Dexter-DAO/dexter-alexa) | Alexa skill — voice-control Dexter through Amazon Echo | `private` |
-| [**dexter-cursor**](https://github.com/Dexter-DAO/dexter-cursor) | x402 plugin for Cursor IDE — search, pay, and build with x402 | `public` |
+### Products
 
-### Developer Tools
+User-facing experiences with their own identity.
 
-| Repo | Description | |
-|------|------------|---|
-| [**dexter-x402-sdk**](https://github.com/Dexter-DAO/dexter-x402-sdk) | Chain-agnostic x402 v2 SDK — client, server, React hooks, Express middleware | `public` |
-| [**dexter-lab**](https://github.com/Dexter-DAO/dexter-lab) | Build, deploy, and monetize paid APIs from your browser | `public` |
-| [**dexter-wallet-app**](https://github.com/Dexter-DAO/dexter-wallet-app) | Mobile wallet with native x402 payment support (Solana + EVM) | `private` |
+| | Repo | Description |
+|---|------|------------|
+| 🟢 | [**dexter-agents**](https://github.com/Dexter-DAO/dexter-agents) | **Dexter Voice** — flagship voice agent built on OpenAI Realtime API + MCP tools + x402 micropayments |
+| 🟢 | [**dexter-lab**](https://github.com/Dexter-DAO/dexter-lab) | **Dexter Lab** — hosted API builder for anyone to create, deploy, and monetize paid endpoints. Colosseum Agent Hackathon 2026 entry. |
+| 🟢 | [**dexter-cursor**](https://github.com/Dexter-DAO/dexter-cursor) | x402 plugin for Cursor IDE — search, pay, and build with x402. Submitted for Cursor review 3/3/26. |
+| 🟢 | [**clawdexter**](https://github.com/Dexter-DAO/clawdexter) | [`@dexterai/clawdexter`](https://www.npmjs.com/package/@dexterai/clawdexter) — x402 marketplace plugin for OpenClaw agents |
+| 🔴 | [**dexter-wallet-app**](https://github.com/Dexter-DAO/dexter-wallet-app) | **Dexter Wallet** — consumer wallet (Backpack fork) with native x402 payment support. Unfinished. |
 
-### Integrations
+### SDKs & Packages
 
-| Repo | Description | |
-|------|------------|---|
-| [**clawdexter**](https://github.com/Dexter-DAO/clawdexter) | x402 payments + marketplace for OpenClaw agents — search, price-check, and auto-pay with USDC | `public` |
+Libraries for developers building on x402.
+
+| | Repo | Description |
+|---|------|------------|
+| 🟢 | [**dexter-x402-sdk**](https://github.com/Dexter-DAO/dexter-x402-sdk) | [`@dexterai/x402`](https://www.npmjs.com/package/@dexterai/x402) — chain-agnostic x402 v2 SDK for client, server, React hooks, and Express middleware |
+| 🟡 | [**vendorsandbox**](https://github.com/Dexter-DAO/vendorsandbox) | Sandbox environment for testing x402 seller implementations |
+
+### Agent Channels
+
+Ways to reach Dexter from other platforms.
+
+| | Repo | Description |
+|---|------|------------|
+| 🟡 | [**dexter-phone**](https://github.com/Dexter-DAO/dexter-phone) | Phone agent — Twilio Media Streams + OpenAI Realtime + MCP. Search is live; payments pending SMS campaign approval (ETA mid-March 2026). |
+| 🟡 | [**dexter-lobster-skill**](https://github.com/Dexter-DAO/dexter-lobster-skill) | x402 marketplace skill for lobster.cash agents — pending further x402 txn handling work with Crossmint |
+| 🔴 | [**dexter-alexa**](https://github.com/Dexter-DAO/dexter-alexa) | Alexa skill for voice-controlling Dexter through Amazon Echo. Needs overhaul before Skills Store submission. |
+
+<sub>Additional private infrastructure and diagnostics tooling not listed.</sub>
 
 ---
 
