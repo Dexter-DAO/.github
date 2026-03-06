@@ -17,67 +17,115 @@
 
 ---
 
-## Architecture
+## Ecosystem
 
 ```mermaid
-graph TD
-    Agents["Agents & Clients"] --> API["dexter-api"]
-    FE["dexter-fe"] --> API
-    API --> MCP["dexter-mcp"]
-    API --> Facilitator["dexter-facilitator"]
-    Facilitator --> Chain["Solana / Base"]
+flowchart LR
+    subgraph clients["Clients"]
+        direction TB
+        fe["dexter-fe"]
+        agents["dexter-agents"]
+        phone["dexter-phone"]
+        alexa["dexter-alexa"]
+        cursor["dexter-cursor"]
+        claw["clawdexter"]
+        lobster["dexter-lobster-skill"]
+    end
+
+    subgraph core["Core"]
+        direction TB
+        api["dexter-api"]
+        loop["dexter-loop"]
+    end
+
+    subgraph services["Services"]
+        direction TB
+        mcp["dexter-mcp"]
+        facilitator["dexter-facilitator"]
+        ads["x402-ads"]
+    end
+
+    subgraph devtools["Dev Tools"]
+        direction TB
+        sdk["dexter-x402-sdk"]
+        lab["dexter-lab"]
+        wallet["dexter-wallet-app"]
+        sandbox["vendorsandbox"]
+    end
+
+    subgraph settle["Settlement"]
+        direction TB
+        solana["Solana"]
+        base["Base"]
+    end
+
+    fe --> api
+    agents --> api
+    phone --> api
+    alexa --> api
+    cursor --> api
+    claw --> api
+    lobster --> api
+
+    api --> mcp
+    api --> facilitator
+    api --> ads
+    loop --> api
+
+    sdk -.-> facilitator
+    lab --> api
+    wallet --> facilitator
+
+    facilitator --> solana
+    facilitator --> base
 ```
 
-> Agents and the frontend talk to **dexter-api**. The API routes tool calls through **dexter-mcp** and settles payments through **dexter-facilitator** on-chain.
-
 ---
-
-## Repositories
 
 ### Core Platform
 
 | Repo | Description | |
 |------|------------|---|
-| **[dexter-fe](https://github.com/Dexter-DAO/dexter-fe)** | Next.js frontend — marketplace, Lab, facilitator dashboard, voice/chat UI | `private` |
-| **[dexter-api](https://github.com/Dexter-DAO/dexter-api)** | Central orchestrator — x402 billing, realtime sessions, MCP proxy, wallet management, marketplace engine | `private` |
-| **[dexter-facilitator](https://github.com/Dexter-DAO/dexter-facilitator)** | x402 v2 payment facilitator — verifies, settles, and sponsors transactions on Solana and EVM | `private` |
-| **[dexter-mcp](https://github.com/Dexter-DAO/dexter-mcp)** | MCP server exposing 60+ Solana DeFi tools over HTTP and stdio | `public` |
+| [**dexter-api**](https://github.com/Dexter-DAO/dexter-api) | Central orchestrator — x402 billing, realtime sessions, MCP proxy, wallet management, marketplace engine | `private` |
+| [**dexter-fe**](https://github.com/Dexter-DAO/dexter-fe) | Next.js frontend — marketplace, Lab, facilitator dashboard, voice/chat UI | `private` |
+| [**dexter-facilitator**](https://github.com/Dexter-DAO/dexter-facilitator) | x402 v2 payment facilitator — verifies, settles, and sponsors transactions on Solana and EVM | `private` |
+| [**dexter-mcp**](https://github.com/Dexter-DAO/dexter-mcp) | MCP server exposing 60+ Solana DeFi tools over HTTP and stdio | `public` |
 
 ### Agent Surfaces
 
 | Repo | Description | |
 |------|------------|---|
-| **[dexter-agents](https://github.com/Dexter-DAO/dexter-agents)** | Flagship voice agent — OpenAI Realtime + MCP tools + x402 micropayments | `public` |
-| **[dexter-phone](https://github.com/Dexter-DAO/dexter-phone)** | Phone agent — Twilio Media Streams + OpenAI Realtime + MCP | `private` |
-| **[dexter-alexa](https://github.com/Dexter-DAO/dexter-alexa)** | Alexa skill — voice-control Dexter through Amazon Echo | `private` |
+| [**dexter-agents**](https://github.com/Dexter-DAO/dexter-agents) | Flagship voice agent — OpenAI Realtime API + MCP tools + x402 micropayments | `public` |
+| [**dexter-phone**](https://github.com/Dexter-DAO/dexter-phone) | Phone agent — Twilio Media Streams + OpenAI Realtime + MCP | `private` |
+| [**dexter-alexa**](https://github.com/Dexter-DAO/dexter-alexa) | Alexa skill — voice-control Dexter through Amazon Echo | `private` |
+| [**dexter-cursor**](https://github.com/Dexter-DAO/dexter-cursor) | x402 plugin for Cursor IDE — search, pay, and build with x402 | `public` |
 
 ### Developer Tools
 
 | Repo | Description | |
 |------|------------|---|
-| **[dexter-x402-sdk](https://github.com/Dexter-DAO/dexter-x402-sdk)** | Chain-agnostic x402 v2 SDK — client, server, React hooks, Express middleware | `public` |
-| **[dexter-cursor](https://github.com/Dexter-DAO/dexter-cursor)** | x402 plugin for Cursor IDE — search, pay, and build with x402 | `public` |
-| **[dexter-lab](https://github.com/Dexter-DAO/dexter-lab)** | Build, deploy, and monetize paid APIs from your browser | `public` |
-| **[dexter-wallet-app](https://github.com/Dexter-DAO/dexter-wallet-app)** | Mobile wallet with native x402 payment support | `private` |
-| **[vendorsandbox](https://github.com/Dexter-DAO/vendorsandbox)** | Sandbox for testing x402 seller implementations | `private` |
+| [**dexter-x402-sdk**](https://github.com/Dexter-DAO/dexter-x402-sdk) | Chain-agnostic x402 v2 SDK — client, server, React hooks, Express middleware | `public` |
+| [**dexter-lab**](https://github.com/Dexter-DAO/dexter-lab) | Build, deploy, and monetize paid APIs from your browser | `public` |
+| [**dexter-wallet-app**](https://github.com/Dexter-DAO/dexter-wallet-app) | Mobile wallet with native x402 payment support (Solana + EVM) | `private` |
+| [**vendorsandbox**](https://github.com/Dexter-DAO/vendorsandbox) | Sandbox for testing x402 seller implementations | `private` |
 
 ### Integrations
 
 | Repo | Description | |
 |------|------------|---|
-| **[clawdexter](https://github.com/Dexter-DAO/clawdexter)** | x402 payments + marketplace for OpenClaw agents | `public` |
-| **[dexter-lobster-skill](https://github.com/Dexter-DAO/dexter-lobster-skill)** | x402 marketplace skill for lobster.cash agents | `private` |
-| **[x402-ads](https://github.com/Dexter-DAO/x402-ads)** | Protocol-native sponsored resource recommendations | `private` |
+| [**clawdexter**](https://github.com/Dexter-DAO/clawdexter) | x402 payments + marketplace for OpenClaw agents — 59+ Solana DeFi tools | `public` |
+| [**dexter-lobster-skill**](https://github.com/Dexter-DAO/dexter-lobster-skill) | x402 marketplace skill for lobster.cash agents | `private` |
+| [**x402-ads**](https://github.com/Dexter-DAO/x402-ads) | Protocol-native sponsored resource recommendations | `private` |
 
 ### Operations
 
 | Repo | Description | |
 |------|------------|---|
-| **[dexter-loop](https://github.com/Dexter-DAO/dexter-loop)** | Autonomous x402 payment traffic engine — wallet fleets, volume targeting, adaptive pacing | `private` |
+| [**dexter-loop**](https://github.com/Dexter-DAO/dexter-loop) | Autonomous x402 payment traffic engine — wallet fleets, volume targeting, adaptive pacing | `private` |
 
 ---
 
-## How it connects
+### How it connects
 
 **Users** visit [dexter.cash](https://dexter.cash) to browse the marketplace, build APIs in Lab, or talk to agents.
 
@@ -85,7 +133,7 @@ graph TD
 
 **Payments** settle on-chain through **dexter-facilitator** — USDC on Solana or Base. The **dexter-x402-sdk** makes integration seamless for any developer.
 
-**Sellers** deploy x402-gated endpoints and get auto-discovered in the **OpenDexter marketplace** (5,000+ indexed APIs).
+**Sellers** deploy x402-gated endpoints and get auto-discovered in the [OpenDexter marketplace](https://dexter.cash/opendexter) (5,000+ indexed APIs). Quality verification, AI naming, and reputation scoring happen automatically.
 
 ---
 
