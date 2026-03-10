@@ -49,6 +49,11 @@ flowchart LR
     subgraph settle["Settlement"]
         solana["Solana"]
         base["Base"]
+        polygon["Polygon"]
+        arbitrum["Arbitrum"]
+        optimism["Optimism"]
+        avalanche["Avalanche"]
+        skale["SKALE"]
     end
 
     fe --> api
@@ -68,6 +73,11 @@ flowchart LR
 
     facilitator --> solana
     facilitator --> base
+    facilitator --> polygon
+    facilitator --> arbitrum
+    facilitator --> optimism
+    facilitator --> avalanche
+    facilitator --> skale
 ```
 
 > 🟢 Production&nbsp;&nbsp;&nbsp;&nbsp;🟡 In progress&nbsp;&nbsp;&nbsp;&nbsp;🔴 Not yet working
