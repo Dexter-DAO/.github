@@ -22,7 +22,6 @@
 ```mermaid
 flowchart LR
     subgraph clients["Clients"]
-        direction TB
         fe["dexter-fe"]
         agents["dexter-agents"]
         phone["dexter-phone"]
@@ -32,26 +31,22 @@ flowchart LR
     end
 
     subgraph core["Core"]
-        direction TB
         api["dexter-api"]
         ads["x402-ads"]
     end
 
     subgraph services["Services"]
-        direction TB
         mcp["dexter-mcp"]
         facilitator["dexter-facilitator"]
     end
 
     subgraph devtools["Dev Tools"]
-        direction TB
         sdk["dexter-x402-sdk"]
         lab["dexter-lab"]
         wallet["dexter-wallet-app"]
     end
 
     subgraph settle["Settlement"]
-        direction TB
         solana["Solana"]
         base["Base"]
     end
