@@ -28,6 +28,7 @@ flowchart LR
         alexa["dexter-alexa"]
         cursor["dexter-cursor"]
         claw["clawdexter"]
+        launchpad["dexter-launchpad"]
     end
 
     subgraph core["Core"]
@@ -62,6 +63,7 @@ flowchart LR
     alexa --> api
     cursor --> api
     claw --> api
+    launchpad --> api
 
     api --> mcp
     api --> facilitator
@@ -106,6 +108,7 @@ User-facing experiences with their own identity.
 | 🟢 | [**dexter-lab**](https://github.com/Dexter-DAO/dexter-lab) | **Dexter Lab** — hosted API builder for anyone to create, deploy, and monetize paid endpoints. Colosseum Agent Hackathon 2026 entry. |
 | 🟢 | [**dexter-cursor**](https://github.com/Dexter-DAO/dexter-cursor) | x402 plugin for Cursor IDE — search, pay, and build with x402. Submitted for Cursor review 3/3/26. |
 | 🟢 | [**clawdexter**](https://github.com/Dexter-DAO/clawdexter) | [`@dexterai/clawdexter`](https://www.npmjs.com/package/@dexterai/clawdexter) — x402 marketplace plugin for OpenClaw agents |
+| 🟡 | [**dexter-launchpad**](https://github.com/Dexter-DAO/dexter-launchpad) | **Dexter Launchpad** — launch autonomous AI agents with their own wallets, tokens, and revenue streams on Solana |
 | 🔴 | [**dexter-wallet-app**](https://github.com/Dexter-DAO/dexter-wallet-app) | **Dexter Wallet** — consumer wallet (Backpack fork) with native x402 payment support. Unfinished. |
 
 ### SDKs & Packages
