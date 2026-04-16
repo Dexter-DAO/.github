@@ -94,7 +94,7 @@ The backbone — API, frontend, settlement, tool server, and monetization engine
 | :green_circle: | [**dexter-api**](https://github.com/Dexter-DAO/dexter-api) | Central orchestrator — x402 billing, realtime sessions, MCP proxy, wallet management, marketplace engine, ecosystem indexing |
 | :green_circle: | [**dexter-fe**](https://github.com/Dexter-DAO/dexter-fe) | Next.js frontend — marketplace, Lab, facilitator dashboard, voice/chat UI. Live at [dexter.cash](https://dexter.cash) |
 | :green_circle: | [**dexter-facilitator**](https://github.com/Dexter-DAO/dexter-facilitator) | x402 v2 payment facilitator — verifies, settles, and sponsors transactions across Solana and 7 EVM chains. The only free facilitator in x402. |
-| :green_circle: | [**dexter-mcp**](https://github.com/Dexter-DAO/dexter-mcp) | Dual MCP server — authenticated Dexter MCP (`mcp.dexter.cash`) and public OpenDexter (`open.dexter.cash`). Also ships [`@dexterai/opendexter`](https://www.npmjs.com/package/@dexterai/opendexter) for local stdio. |
+| :green_circle: | [**dexter-mcp**](https://github.com/Dexter-DAO/dexter-mcp) | Dual MCP server — authenticated Dexter MCP (`mcp.dexter.cash`) and public OpenDexter (`open.dexter.cash`). Hosts [`@dexterai/x402-core`](https://www.npmjs.com/package/@dexterai/x402-core) shared types and search client. |
 | :green_circle: | [**dexter-mpp**](https://github.com/Dexter-DAO/dexter-mpp) | [`@dexterai/mpp`](https://www.npmjs.com/package/@dexterai/mpp) — Managed Solana settlement for the Machine Payments Protocol. Zero gas for buyers, zero blockchain ops for sellers. |
 | :green_circle: | [**x402-ads**](https://github.com/Dexter-DAO/x402-ads) | Protocol-native sponsored resource recommendations (Instinct). Ads injected into settlement responses. Publisher middleware, advertiser API, USDC payouts. |
 
@@ -123,7 +123,7 @@ OpenDexter across every AI development surface.
 
 | | Repo | Description |
 |---|------|------------|
-| :green_circle: | [**opendexter-ide**](https://github.com/Dexter-DAO/opendexter-ide) | x402 plugin for **Cursor IDE** — MCP server + 7 skills + scaffold commands. Also installs as a **Claude Code** plugin via `npx @dexterai/opendexter install`. |
+| :green_circle: | [**opendexter-ide**](https://github.com/Dexter-DAO/opendexter-ide) | [`@dexterai/opendexter`](https://www.npmjs.com/package/@dexterai/opendexter) — x402 plugin + npm package. MCP server + 6 skills + scaffold commands. Installs into **Cursor**, **Claude Code**, **Codex**, and any MCP client. |
 | :green_circle: | [**opendexter-plugin**](https://github.com/Dexter-DAO/opendexter-plugin) | [`@dexterai/opendexter-plugin`](https://www.npmjs.com/package/@dexterai/opendexter-plugin) — **OpenClaw** plugin. Search, price-check, and pay for x402 APIs. Replaces clawdexter. |
 | :green_circle: | [**opendexter-agent**](https://github.com/Dexter-DAO/opendexter-agent) | **Pinata** agent template — deploy a fully configured x402-native agent in one click |
 | :green_circle: | [**clawdexter**](https://github.com/Dexter-DAO/clawdexter) | [`@dexterai/clawdexter`](https://www.npmjs.com/package/@dexterai/clawdexter) — original OpenClaw plugin. Superseded by [opendexter-plugin](https://github.com/Dexter-DAO/opendexter-plugin). |
