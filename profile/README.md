@@ -49,6 +49,7 @@ flowchart LR
     subgraph channels["Agent Channels"]
         phone["dexter-phone"]
         alexa["dexter-alexa"]
+        esq["dexter-esq"]
     end
 
     chains["Solana + Base + Polygon + Arbitrum + Optimism + Avalanche + BSC + SKALE"]
@@ -66,6 +67,7 @@ flowchart LR
 
     phone --> api
     alexa --> api
+    esq --> api
 
     api --> mcp
     api --> facilitator
@@ -135,6 +137,7 @@ Platform-specific ways to reach Dexter.
 | | Repo | Description |
 |---|------|------------|
 | :yellow_circle: | [**dexter-phone**](https://github.com/Dexter-DAO/dexter-phone) | Phone agent — Twilio Media Streams + OpenAI Realtime + MCP. Search works; paid calls pending US A2P 10DLC SMS compliance approval. |
+| :yellow_circle: | [**dexter-esq**](https://github.com/Dexter-DAO/dexter-esq) | AI legal-channel assistant — openclaw agent for the Day One Law outside counsel engagement. Document retrieval, drafting, DocuSeal signing, email coordination. |
 | :red_circle: | [**dexter-alexa**](https://github.com/Dexter-DAO/dexter-alexa) | Alexa skill for Amazon Echo. Needs overhaul before Skills Store submission. |
 
 <sub>Additional private infrastructure and security tooling not listed.</sub>
