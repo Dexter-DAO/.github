@@ -97,6 +97,7 @@ The backbone — API, frontend, settlement, tool server, and monetization engine
 | :green_circle: | [**dexter-mcp**](https://github.com/Dexter-DAO/dexter-mcp) | Dual MCP server — authenticated Dexter MCP (`mcp.dexter.cash`) and public OpenDexter (`open.dexter.cash`). Hosts [`@dexterai/x402-core`](https://www.npmjs.com/package/@dexterai/x402-core) shared types and search client. |
 | :green_circle: | [**dexter-mpp**](https://github.com/Dexter-DAO/dexter-mpp) | [`@dexterai/mpp`](https://www.npmjs.com/package/@dexterai/mpp) — Managed Solana settlement for the Machine Payments Protocol. Zero gas for buyers, zero blockchain ops for sellers. |
 | :green_circle: | [**x402-ads**](https://github.com/Dexter-DAO/x402-ads) | [`@dexterai/x402-ads-publisher`](https://www.npmjs.com/package/@dexterai/x402-ads-publisher) + [`@dexterai/x402-ads-types`](https://www.npmjs.com/package/@dexterai/x402-ads-types) — Protocol-native sponsored resource recommendations (Instinct). Ads injected into settlement responses. Publisher middleware, advertiser API, USDC payouts. |
+| :green_circle: | [**dexter-decks**](https://github.com/Dexter-DAO/dexter-decks) | Commercial decks for the four tentpoles. Hand-written HTML rendered by headless Chrome — one source of truth for investor and partner conversations, version-controlled alongside the products they pitch. Instinct v0.7 shipped. |
 
 ### Products
 
