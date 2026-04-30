@@ -141,6 +141,14 @@ Platform-specific ways to reach Dexter.
 | :yellow_circle: | [**dexter-esq**](https://github.com/Dexter-DAO/dexter-esq) | AI legal-channel assistant — openclaw agent for the Day One Law outside counsel engagement. Document retrieval, drafting, DocuSeal signing, email coordination. |
 | :red_circle: | [**dexter-alexa**](https://github.com/Dexter-DAO/dexter-alexa) | Alexa skill for Amazon Echo. Needs overhaul before Skills Store submission. |
 
+### Events
+
+Stage decks, demo prep, and follow-up material for conferences, hackathons, and live appearances.
+
+| | Repo | Description |
+|---|------|------------|
+| :yellow_circle: | [**dexter-accelerate**](https://github.com/Dexter-DAO/dexter-accelerate) | **Solana Accelerate AI** — May 6, 2026, The Lab Miami. *Search, Reinvented for the Agent Economy* — 7-minute demo of x402gle. |
+
 <sub>Additional private infrastructure and security tooling not listed.</sub>
 
 ---
