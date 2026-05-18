@@ -110,13 +110,14 @@ User-facing experiences with their own identity.
 | :green_circle: | [**x402gle**](https://github.com/Dexter-DAO/x402gle) | **x402gle** — x402 ecosystem explorer. Real-time indexing across 8 chains, facilitator leaderboards, resource quality scoring. Live at [x402gle.com](https://x402gle.com) |
 | :yellow_circle: | [**dexter-launchpad**](https://github.com/Dexter-DAO/dexter-launchpad) | **Dexter Launchpad** — launch autonomous AI agents with their own wallets, tokens, and revenue streams on Solana |
 
-### SDK
+### SDK & Tooling
 
-Libraries for developers building on x402.
+Libraries and tools for developers building on x402.
 
 | | Repo | Description |
 |---|------|------------|
 | :green_circle: | [**dexter-x402-sdk**](https://github.com/Dexter-DAO/dexter-x402-sdk) | [`@dexterai/x402`](https://www.npmjs.com/package/@dexterai/x402) — full-stack x402 v2 SDK. Client (`wrapFetch`), server (`x402Middleware`), React hooks, Express middleware, Access Pass, dynamic pricing, sponsored access. Multi-chain. |
+| :yellow_circle: | [**skillsmith-cli**](https://github.com/Dexter-DAO/skillsmith-cli) | [`@dexterai/skillsmith-cli`](https://www.npmjs.com/package/@dexterai/skillsmith-cli) — headless CLI for composing, testing, and publishing x402 composed skills. Intent-ranked resource discovery, real paid test runs, Claude Code skill export. The terminal counterpart to the [Skillsmith workbench](https://x402gle.com/skills/compose). |
 
 ### Integrations
 
