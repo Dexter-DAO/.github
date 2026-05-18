@@ -150,6 +150,14 @@ Stage decks, demo prep, and follow-up material for conferences, hackathons, and 
 |---|------|------------|
 | :yellow_circle: | [**dexter-accelerate**](https://github.com/Dexter-DAO/dexter-accelerate) | **Solana Accelerate AI** — May 6, 2026, The Lab Miami. *Search, Reinvented for the Agent Economy* — 7-minute demo of x402gle. |
 
+### Intelligence & Tooling
+
+Internal instruments — how we measure the ecosystem and ourselves against it.
+
+| | Repo | Description |
+|---|------|------------|
+| :green_circle: | [**dexter-bakeoff**](https://github.com/Dexter-DAO/dexter-bakeoff) | Permanent benchmark for agent-payment interfaces. Cold-installs OpenDexter, Agentcash, Pay.sh, and Agentic.market, runs an identical 6-task script with real money, verifies every settlement on-chain. Structured, diffable, re-run on every competitor release. |
+
 <sub>Additional private infrastructure and security tooling not listed.</sub>
 
 ---
