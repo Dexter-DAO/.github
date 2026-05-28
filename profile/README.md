@@ -43,6 +43,7 @@ flowchart LR
         mcp["dexter-mcp"]
         facilitator["dexter-facilitator"]
         mpp["dexter-mpp"]
+        vault["dexter-vault"]
         ads["x402-ads"]
     end
 
@@ -76,6 +77,8 @@ flowchart LR
 
     facilitator --> chains
     mpp --> chains
+    facilitator --> vault
+    vault --> chains
 
     sdk["dexter-x402-sdk"] -.-> facilitator
     sdk -.-> mcp
@@ -96,6 +99,7 @@ The backbone — API, frontend, settlement, tool server, and monetization engine
 | :green_circle: | [**dexter-facilitator**](https://github.com/Dexter-DAO/dexter-facilitator) | x402 v2 payment facilitator — verifies, settles, and sponsors transactions across Solana and 7 EVM chains. The only free facilitator in x402. |
 | :green_circle: | [**dexter-mcp**](https://github.com/Dexter-DAO/dexter-mcp) | Dual MCP server — authenticated Dexter MCP (`mcp.dexter.cash`) and public OpenDexter (`open.dexter.cash`). Hosts [`@dexterai/x402-core`](https://www.npmjs.com/package/@dexterai/x402-core) shared types and search client. |
 | :green_circle: | [**dexter-mpp**](https://github.com/Dexter-DAO/dexter-mpp) | [`@dexterai/mpp`](https://www.npmjs.com/package/@dexterai/mpp) — Managed Solana settlement for the Machine Payments Protocol. Zero gas for buyers, zero blockchain ops for sellers. |
+| :green_circle: | [**dexter-vault**](https://github.com/Dexter-DAO/dexter-vault) | Non-custodial withdrawal gate for the Open Tabs Standard. Anchor program on Solana mainnet — passkey-rooted, counter-gated: agents stream micropayments from your Swig wallet, but no one (not even Dexter) can drain it while tabs are open. |
 | :green_circle: | [**x402-ads**](https://github.com/Dexter-DAO/x402-ads) | [`@dexterai/x402-ads-publisher`](https://www.npmjs.com/package/@dexterai/x402-ads-publisher) + [`@dexterai/x402-ads-types`](https://www.npmjs.com/package/@dexterai/x402-ads-types) — Protocol-native sponsored resource recommendations (Instinct). Ads injected into settlement responses. Publisher middleware, advertiser API, USDC payouts. |
 | :green_circle: | [**dexter-decks**](https://github.com/Dexter-DAO/dexter-decks) | Commercial decks for the four tentpoles. Hand-written HTML rendered by headless Chrome — one source of truth for investor and partner conversations, version-controlled alongside the products they pitch. Instinct v0.7 shipped. |
 
