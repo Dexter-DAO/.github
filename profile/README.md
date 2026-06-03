@@ -45,6 +45,7 @@ flowchart LR
         mpp["dexter-mpp"]
         vault["dexter-vault"]
         ads["x402-ads"]
+        staking["dexter-staking"]
     end
 
     subgraph channels["Agent Channels"]
@@ -110,6 +111,7 @@ User-facing experiences with their own identity.
 | | Repo | Description |
 |---|------|------------|
 | :green_circle: | [**dexter-agents**](https://github.com/Dexter-DAO/dexter-agents) | **Dexter Voice** — flagship voice agent. OpenAI Realtime WebRTC + MCP tools + managed wallets + x402 micropayments. Live at [beta.dexter.cash](https://beta.dexter.cash) |
+| :green_circle: | [**dexter-staking**](https://github.com/Dexter-DAO/dexter-staking) | **DEXTER Staking** — lock DEXTER, earn DEXTER. Weight-multiplier rewards (180-day = 7×), built on Streamflow. Live at [stake.dexter.cash](https://stake.dexter.cash) |
 | :green_circle: | [**dexter-lab**](https://github.com/Dexter-DAO/dexter-lab) | **Dexter Lab** — AI-powered API builder. Describe an endpoint, Lab generates, deploys, verifies, and publishes it. Live at [lab.dexter.cash](https://lab.dexter.cash) |
 | :green_circle: | [**x402gle**](https://github.com/Dexter-DAO/x402gle) | **x402gle** — x402 ecosystem explorer. Real-time indexing across 8 chains, facilitator leaderboards, resource quality scoring. Live at [x402gle.com](https://x402gle.com) |
 | :yellow_circle: | [**dexter-launchpad**](https://github.com/Dexter-DAO/dexter-launchpad) | **Dexter Launchpad** — launch autonomous AI agents with their own wallets, tokens, and revenue streams on Solana |
