@@ -138,17 +138,12 @@ Platform-specific ways to reach Dexter.
 - :yellow_circle:  **[dexter-esq](https://github.com/Dexter-DAO/dexter-esq)** — AI legal-channel assistant. Openclaw agent for the Day One Law outside counsel engagement. Document retrieval, drafting, DocuSeal signing, email coordination.
 - :red_circle:  **[dexter-alexa](https://github.com/Dexter-DAO/dexter-alexa)** — Alexa skill for Amazon Echo. Needs overhaul before Skills Store submission.
 
-### Events
-
-Stage decks, demo prep, and follow-up material for conferences, hackathons, and live appearances.
-
-- :yellow_circle:  **[dexter-accelerate](https://github.com/Dexter-DAO/dexter-accelerate)** — **Solana Accelerate AI.** May 6, 2026, The Lab Miami. *Search, Reinvented for the Agent Economy* — 7-minute demo of x402gle.
-
 ### Intelligence & Tooling
 
-Internal instruments — how we measure the ecosystem and ourselves against it.
+Internal instruments — how we measure the ecosystem and ourselves against it. Includes the competitive benchmark and the live-event material we use to engage the outside world.
 
 - :green_circle:  **[dexter-bakeoff](https://github.com/Dexter-DAO/dexter-bakeoff)** — Permanent benchmark for agent-payment interfaces. Cold-installs OpenDexter, Agentcash, Pay.sh, and Agentic.market, runs an identical 6-task script with real money, verifies every settlement on-chain. Structured, diffable, re-run on every competitor release.
+- :yellow_circle:  **[dexter-accelerate](https://github.com/Dexter-DAO/dexter-accelerate)** — **Solana Accelerate AI.** May 6, 2026, The Lab Miami. *Search, Reinvented for the Agent Economy* — 7-minute demo of x402gle. Stage decks, demo prep, and follow-up material for conferences and live appearances live here.
 
 <sub>Additional private infrastructure and security tooling not listed.</sub>
 
