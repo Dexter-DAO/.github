@@ -88,7 +88,7 @@ flowchart LR
 
     sdk["dexter-x402-sdk"] -.-> facilitator
     sdk -.-> mcp
-    vaultsdk["dexter-vault-sdk"] -.-> vault
+    vaultsdk["@dexterai/vault"] -.-> vault
 ```
 
 > Status: &nbsp; :green_circle: Production &nbsp;&nbsp; :yellow_circle: In development &nbsp;&nbsp; :red_circle: Not yet working &nbsp;&nbsp; :lock: Source private
@@ -123,7 +123,8 @@ User-facing experiences with their own identity.
 Libraries and tools for developers building on x402.
 
 - :green_circle:  **[dexter-x402-sdk](https://github.com/Dexter-DAO/dexter-x402-sdk)** — [`@dexterai/x402`](https://www.npmjs.com/package/@dexterai/x402). Full-stack x402 v2 SDK. Client (`wrapFetch`), server (`x402Middleware`), React hooks, Express middleware, Access Pass, dynamic pricing, sponsored access. Multi-chain.
-- :green_circle:  **[dexter-vault-sdk](https://github.com/Dexter-DAO/dexter-vault-sdk)** — Off-chain mirror of the dexter-vault Solana Anchor program. Instruction builders, message encoders, account decoders, precompile helpers, signer interfaces.
+- :green_circle: :lock:  **[@dexterai/vault](https://www.npmjs.com/package/@dexterai/vault)** — Public npm client for the canonical Dexter Vault deployment. The full SDK development source is private.
+- :green_circle:  **[dexter-mainnet-proofs](https://github.com/Dexter-DAO/dexter-mainnet-proofs)** — Narrow public repository for point-in-time mainnet proof receipts, checksums, and program metadata.
 - :yellow_circle: :lock:  **[skillsmith-cli](https://github.com/Dexter-DAO/skillsmith-cli)** — [`@dexterai/skillsmith-cli`](https://www.npmjs.com/package/@dexterai/skillsmith-cli). Headless CLI for composing, testing, and publishing x402 composed skills. Intent-ranked resource discovery, real paid test runs, Claude Code skill export. The terminal counterpart to the [Skillsmith workbench](https://x402gle.com/skills/compose).
 
 ### Integrations
