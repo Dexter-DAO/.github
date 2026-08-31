@@ -21,12 +21,7 @@
 - **[Dexter Connect](https://github.com/Dexter-DAO/dexter-connect)** adds passkey-based Dexter Wallet connection and governed authority to applications.
 - **[OpenDexter](https://github.com/Dexter-DAO/opendexter-ide)** packages Dexter's hosted tools for Codex, Claude Code, ChatGPT, Cursor, and other MCP clients.
 - **[OpenDexter for OpenClaw](https://github.com/Dexter-DAO/opendexter-plugin)** is the OpenClaw integration for searching and paying for x402 services.
-
-### Services and distribution
-
-- **[Dexter MCP](https://github.com/Dexter-DAO/dexter-mcp)** contains the hosted MCP service used by OpenDexter.
 - **[Hark plugin](https://github.com/Dexter-DAO/hark-plugin)** distributes Hark's durable-wait and exact-task continuation plugin for Codex.
-- **[Composed Skills](https://github.com/Dexter-DAO/composed-skills)** is the current distribution repository for x402gle composed skills.
 
 ### Mainnet records
 
