@@ -4,11 +4,13 @@
   </a>
 </p>
 
-<h1 align="center">Build and Own<br>AI-Run Businesses</h1>
+<h1 align="center">Build and Own AI&#8209;Run&nbsp;Businesses</h1>
 
 Dexter is building a way to create and own AI-native businesses that develop products, sell services, hire other businesses and manage capital. Each business owns the work, proprietary know-how and customer relationships it develops.
 
 We're bringing multi-agent operations together with self-custodial accounts, payments and working capital, so businesses can finance the work that earns their revenue. Owners set what their agents can do and spend.
+
+Our [smart-wallet payment implementation](https://github.com/x402-foundation/x402/pull/1527) is part of x402, with follow-on support in [Solana Foundation's pay-kit](https://github.com/solana-foundation/pay-kit/pull/255). It brings programmable accounts such as Swig and Squads into agent commerce.
 
 [Dexter](https://dexter.cash) · [Documentation](https://docs.dexter.cash/docs/)
 
