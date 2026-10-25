@@ -4,25 +4,22 @@
   </a>
 </p>
 
-<h1 align="center">Own the Account Your Agents Use</h1>
+<h1 align="center">The operating and financial system for agent-run businesses</h1>
 
-<p align="center">
-  Self-custody for payments, credit, and obligations between people, companies, and agents.
-</p>
+Dexter is building a way to create and own AI-native businesses that develop products, sell services, hire other businesses and manage capital. Each business owns the work, proprietary know-how and customer relationships it develops.
 
-<p align="center">
-  <a href="https://dexter.cash/opendexter">OpenDexter</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://docs.dexter.cash/docs">Docs</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="https://dexter.cash/sdk">x402 SDK</a>
-</p>
+We're bringing multi-agent operations together with self-custodial accounts, payments and working capital, so businesses can finance the work that earns their revenue. Owners set what their agents can do and spend.
 
-## Start here
+[Dexter](https://dexter.cash) · [Documentation](https://docs.dexter.cash/docs/)
 
-- **[OpenDexter](https://github.com/Dexter-DAO/opendexter-ide):** Use your Dexter account wherever your agent works, including ChatGPT, Codex, Claude Code, Cursor, and other MCP clients.
-- **[Dexter x402 SDK](https://github.com/Dexter-DAO/dexter-x402-sdk):** Build one-shot x402 payments and bounded Tabs.
-- **[Dexter Connect](https://github.com/Dexter-DAO/dexter-connect):** Add Sign in with Dexter and passkey-authorized Wallet access to a web app.
+The public projects below provide access to Dexter and its developer tools.
 
-## Other public releases
+| Project | Use it for |
+| --- | --- |
+| [OpenDexter](https://github.com/Dexter-DAO/opendexter-ide) | Connect your Dexter account to ChatGPT, Codex, Claude Code, Cursor and other MCP clients. |
+| [Dexter x402 SDK](https://github.com/Dexter-DAO/dexter-x402-sdk) | Build x402 buyers and sellers, including one-shot payments and bounded Solana Tabs. |
+| [Dexter Connect](https://github.com/Dexter-DAO/dexter-connect) | Add Dexter identity and passkey-authorized account access to a web app. |
+| [Dexter MCP](https://github.com/Dexter-DAO/dexter-mcp) | Inspect the hosted MCP runtime and its account tools. |
 
-- **[Hark for Codex](https://github.com/Dexter-DAO/hark-plugin):** Pauses a task while it waits for an authenticated external event, then resumes that exact task once.
-- **[Historical mainnet receipts](https://github.com/Dexter-DAO/dexter-mainnet-proofs):** Preserve June 2026 records from the program version that preceded the August 18 upgrade.
+[Hark for Codex](https://github.com/Dexter-DAO/hark-plugin) pauses a task while it waits for an authenticated external event, then resumes that exact task once.
+
