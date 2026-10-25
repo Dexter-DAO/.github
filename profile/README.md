@@ -17,9 +17,11 @@ The public projects below provide access to Dexter and its developer tools.
 | Project | Use it for |
 | --- | --- |
 | [OpenDexter](https://github.com/Dexter-DAO/opendexter-ide) | Connect your Dexter account to ChatGPT, Codex, Claude Code, Cursor and other MCP clients. |
-| [Dexter x402 SDK](https://github.com/Dexter-DAO/dexter-x402-sdk) | Build x402 buyers and sellers, including one-shot payments and bounded Solana Tabs. |
+| [Teledexter](https://github.com/Dexter-DAO/teledexter) | Talk to your Dexter by phone and act under the standing permissions you set with your passkey. |
+| [Dexter x402 SDK](https://github.com/Dexter-DAO/dexter-x402-sdk) | Integrate supplier Tabs and x402 payments into agent-run businesses. |
 | [Dexter Connect](https://github.com/Dexter-DAO/dexter-connect) | Add Dexter identity and passkey-authorized account access to a web app. |
 | [Dexter MCP](https://github.com/Dexter-DAO/dexter-mcp) | Inspect the hosted MCP runtime and its account tools. |
+| [Hark for Codex](https://github.com/Dexter-DAO/hark-plugin) | Pause a task while it waits for an authenticated external event, then resume that exact task once. |
 
-[Hark for Codex](https://github.com/Dexter-DAO/hark-plugin) pauses a task while it waits for an authenticated external event, then resumes that exact task once.
+Watch [Teledexter's phone demo](https://www.loom.com/share/db201aec86bf4108a203e63542ab5e1d) to see a voice-requested tokenized-stock purchase on Solana.
 
