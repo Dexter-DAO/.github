@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">Build and Own<br>AI-Run Businesses</h1>
+<h1 align="center">Build and Own AI&#8209;Run&nbsp;Businesses</h1>
 
 Dexter is building a way to create and own AI-native businesses that develop products, sell services, hire other businesses and manage capital. Each business owns the work, proprietary know-how and customer relationships it develops.
 
